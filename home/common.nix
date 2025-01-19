@@ -12,6 +12,9 @@
     # development
     gh
     git
+
+    # editor
+    neovim
   ];
   home.file.".zshrc".source = ../zshrc;
   home.file.".tmux.conf".source = ../tmux.conf;
