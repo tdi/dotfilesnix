@@ -2,7 +2,17 @@
 
 {
   # Example: shared user packages
-  home.packages = with pkgs; [ wget curl jq tmux zplug gh git ];
+  home.packages = with pkgs; [
+    # config shell
+    oh-my-zsh
+    tmux
+    zplug
+    pure-prompt
+
+    # development
+    gh
+    git
+  ];
   home.file.".zshrc".source = ../zshrc;
   home.file.".tmux.conf".source = ../tmux.conf;
   programs.zsh.enable = true;
