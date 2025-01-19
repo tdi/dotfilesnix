@@ -16,7 +16,7 @@ let
 in with lib; {
   home.sessionPath = [ "/opt/homebrew/bin" ];
 
-  home.file.".common.Brewfile" = {
+  home.file.".Brewfile" = {
     text = (concatMapStrings (tap:
       ''tap "'' + tap + ''
         "
@@ -34,7 +34,7 @@ in with lib; {
 
     ) casks);
     onChange = ''
-      /opt/homebrew/bin/brew bundle install --cleanup --no-upgrade --force --no-lock --file ~/.common.Brewfile""
+      /opt/homebrew/bin/brew bundle install --cleanup --no-upgrade --force --no-lock --global""
     '';
   };
 }
