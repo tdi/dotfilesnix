@@ -12,6 +12,10 @@
     # development
     gh
     git
+    nodejs_22
+
+    # cloud
+    awscli2
 
     # editor
     neovim

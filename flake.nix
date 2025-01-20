@@ -15,11 +15,9 @@
       managedHosts = {
         armisael = { # personal laptop
           system = "aarch64-darwin";
-          hostname = "armisael";
         };
         zeruel = { # work laptop
           system = "aarch64-darwin";
-          hostname = "zeruel";
         };
       };
     in {
