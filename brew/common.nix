@@ -12,6 +12,7 @@ let
     "orcaslicer"
     "raycast"
     "brave-browser"
+    "karabiner-elements"
   ];
 in with lib; {
   home.sessionPath = [ "/opt/homebrew/bin" ];
