@@ -8,17 +8,32 @@
     tmux
     zplug
     pure-prompt
+    fzf
 
     # development
     gh
     git
     nodejs_22
+    azure-cli
 
     # cloud
     awscli2
 
     # editor
     neovim
+    ripgrep
+    lynx
+    luarocks
+    fd
+
+    # lsp
+    lua-language-server
+    typescript-language-server
+
+    # puml
+    plantuml
+    graphviz
+
   ];
   home.file.".zshrc".source = ../zshrc;
   home.file.".tmux.conf".source = ../tmux.conf;
