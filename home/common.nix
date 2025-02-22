@@ -15,6 +15,7 @@
     git
     nodejs_22
     azure-cli
+    go
 
     # cloud
     awscli2
@@ -25,6 +26,9 @@
     lynx
     luarocks
     fd
+    isort
+    prettierd
+    stylua
 
     # lsp
     lua-language-server
