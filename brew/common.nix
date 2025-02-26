@@ -1,7 +1,8 @@
 { config, pkgs, lib, ... }:
 
 let
-  taps = [ "homebrew/bundle" ];
+  taps = [ "homebrew/bundle" 
+  "niukitabobko/tap"];
 
   brews = [ ];
 
@@ -13,6 +14,11 @@ let
     "raycast"
     "brave-browser"
     "karabiner-elements"
+    "nikitabobko/tap/aerospace"
+
+    "slack"
+    "microsoft-teams"
+
   ];
 in with lib; {
   home.sessionPath = [ "/opt/homebrew/bin" ];
