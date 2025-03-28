@@ -16,6 +16,7 @@
     nodejs_22
     azure-cli
     go
+    uv
 
     # cloud
     awscli2
@@ -33,6 +34,9 @@
     # lsp
     lua-language-server
     typescript-language-server
+    yaml-language-server
+    pyright
+    nil
 
     # puml
     plantuml

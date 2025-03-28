@@ -1,8 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  taps = [ "homebrew/bundle" 
-  "niukitabobko/tap"];
+  taps = [ "homebrew/bundle" ];
 
   brews = [ ];
 
@@ -14,7 +13,6 @@ let
     "raycast"
     "brave-browser"
     "karabiner-elements"
-    "nikitabobko/tap/aerospace"
 
     "slack"
     "microsoft-teams"
