@@ -17,6 +17,9 @@ let
     "slack"
     "microsoft-teams"
 
+    "localsend"
+    "winbox"
+
   ];
 in with lib; {
   home.sessionPath = [ "/opt/homebrew/bin" ];
