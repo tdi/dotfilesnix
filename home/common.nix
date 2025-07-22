@@ -52,6 +52,6 @@
   home.file.".tmux.conf".source = ../tmux.conf;
   programs.zsh.enable = true;
   home.stateVersion = "25.05";
-  home.username = "jakub";
+  home.username = "darek";
 }
 
