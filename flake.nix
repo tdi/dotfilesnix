@@ -1,5 +1,5 @@
 {
-  description = "Jakub Wozniak's home manager flake";
+  description = "Darek's home manager flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -22,7 +22,7 @@
       };
     in {
       homeConfigurations = builtins.listToAttrs (map (hostName: {
-        name = "jakub@${hostName}";
+        name = "darek@${hostName}";
 
         value = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = managedHosts.${hostName}.system; };

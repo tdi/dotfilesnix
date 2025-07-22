@@ -6,6 +6,6 @@
 
   home.file."Library/Application\ Support/com.mitchellh.ghostty/config".source =
     ../ghostty.conf;
-  home.homeDirectory = "/Users/jakub";
+  home.homeDirectory = "/Users/darek";
 }
 

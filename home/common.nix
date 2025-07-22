@@ -9,6 +9,8 @@
     zplug
     pure-prompt
     fzf
+    starship
+    direnv
 
     # development
     gh
@@ -17,7 +19,9 @@
     azure-cli
     go
     uv
-
+    jq
+    ruff
+    
     # cloud
     awscli2
 
@@ -30,6 +34,7 @@
     isort
     prettierd
     stylua
+    lazygit
 
     # lsp
     lua-language-server

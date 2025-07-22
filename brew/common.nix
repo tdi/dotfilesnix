@@ -1,25 +1,44 @@
 { config, pkgs, lib, ... }:
 
 let
-  taps = [ "homebrew/bundle" ];
+  taps = [ 
+    "homebrew/bundle"
+    "homebrew/services"
+    "siderolabs/tap"
+    "tenderly/tenderly"
+  ];
 
-  brews = [ ];
+  brews = [
+    "jpeg-xl"
+    "openssl@3"
+    "cmake"
+    "unbound"
+    "gnutls"
+    "harfbuzz"
+    "libarchive"
+    "libass"
+    "libmicrohttpd"
+    "libsndfile"
+    "tesseract"
+    "gnu-getopt"
+    "htop"
+    "hugo"
+    "icu4c@75"
+    "protobuf"
+    "socket_vmnet"
+  ];
 
   casks = [
     "1password"
-    "balenaetcher"
-    "ghostty"
-    "orcaslicer"
-    "raycast"
     "brave-browser"
-    "karabiner-elements"
-
-    "slack"
+    "font-fira-code"
+    "font-fira-code-nerd-font"
+    "gcloud-cli"
+    "ghostty"
+    "maccy"
     "microsoft-teams"
-
-    "localsend"
-    "winbox"
-
+    "orbstack"
+    "slack"
   ];
 in with lib; {
   home.sessionPath = [ "/opt/homebrew/bin" ];
