@@ -13,7 +13,7 @@
   outputs = { nixpkgs, home-manager, ... }:
     let
       managedHosts = {
-        armisael = { # personal laptop
+        mac = { # personal laptop
           system = "aarch64-darwin";
         };
         zeruel = { # work laptop

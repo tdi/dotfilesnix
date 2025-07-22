@@ -35,10 +35,14 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias ghosttyconfig="$EDITOR ~/Library/Application\ Support/com.mitchellh.ghostty/config"
 fi
 
-if [[ -z "$TMUX" ]]; then
-    if tmux has-session 2>/dev/null; then
-        tmux attach
-    else
-        tmux
-    fi
-fi
+# if [[ -z "$TMUX" ]]; then
+#     if tmux has-session 2>/dev/null; then
+#         tmux attach
+#     else
+#         tmux
+#     fi
+# fi
+export NIX_SHELL="zsh"
+alias vim='nvim'
+
+eval "$(direnv hook zsh)"

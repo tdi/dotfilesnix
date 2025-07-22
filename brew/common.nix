@@ -2,7 +2,6 @@
 
 let
   taps = [ 
-    "homebrew/bundle"
     "homebrew/services"
     "siderolabs/tap"
     "tenderly/tenderly"
@@ -10,21 +9,11 @@ let
 
   brews = [
     "jpeg-xl"
-    "openssl@3"
-    "cmake"
     "unbound"
-    "gnutls"
     "harfbuzz"
-    "libarchive"
-    "libass"
-    "libmicrohttpd"
-    "libsndfile"
-    "tesseract"
-    "gnu-getopt"
     "htop"
     "hugo"
     "icu4c@75"
-    "protobuf"
     "socket_vmnet"
   ];
 
@@ -61,7 +50,7 @@ in with lib; {
 
     ) casks);
     onChange = ''
-      /opt/homebrew/bin/brew bundle install --cleanup --no-upgrade --force --no-lock --global""
+      /opt/homebrew/bin/brew bundle install --cleanup --no-upgrade --force --global""
     '';
   };
 }

@@ -20,7 +20,6 @@
     go
     uv
     jq
-    ruff
     
     # cloud
     awscli2
@@ -44,7 +43,6 @@
     nil
 
     # puml
-    plantuml
     graphviz
 
   ];
