@@ -9,7 +9,6 @@
     zplug
     pure-prompt
     fzf
-    starship
     direnv
 
     # development

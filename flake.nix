@@ -16,7 +16,7 @@
         mac = { # personal laptop
           system = "aarch64-darwin";
         };
-        zeruel = { # work laptop
+        mac-1 = { # work laptop
           system = "aarch64-darwin";
         };
       };
