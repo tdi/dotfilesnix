@@ -9,8 +9,8 @@
     zplug
     pure-prompt
     fzf
-    starship
     direnv
+    zsh-autosuggestions
 
     # development
     gh
@@ -41,7 +41,6 @@
     yaml-language-server
     pyright
     nil
-    zsh-autosuggestions
 
     # puml
     graphviz

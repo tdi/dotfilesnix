@@ -33,9 +33,9 @@ source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 alias vim='nvim'
 alias k='kubectl'
+alias nixdev='nix develop -c $SHELL'
 
 
 eval "$(direnv hook zsh)"
-# eval "$(starship init zsh)"
 eval "$(gh copilot alias -- zsh)"
 
