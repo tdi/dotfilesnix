@@ -10,9 +10,6 @@ export PATH="$HOME/.cargo/bin":$PATH
 
 source $ZSH/oh-my-zsh.sh
 
-# export LANG=en_US.UTF-8
-# export LC_TIME=pl_PL.UTF-8
-# export LC_ALL=en_US.UTF-7
 source ~/.nix-profile/share/zplug/init.zsh
 
 zplug "mafredri/zsh-async", from:github
@@ -39,6 +36,6 @@ alias k='kubectl'
 
 
 eval "$(direnv hook zsh)"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 eval "$(gh copilot alias -- zsh)"
 
