@@ -1,18 +1,18 @@
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
 
-export PATH=$PATH:/opt/homebrew/bin
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME=""
-plugins=(git)
+plugins=(git ssh-agent)
+# User configuration
+
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/tdi/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin":$PATH
 
 source $ZSH/oh-my-zsh.sh
 
-# Github Copilot for CLI
-eval "$(gh copilot alias -- zsh)"
-
+# export LANG=en_US.UTF-8
+# export LC_TIME=pl_PL.UTF-8
+# export LC_ALL=en_US.UTF-7
 source ~/.nix-profile/share/zplug/init.zsh
 
 zplug "mafredri/zsh-async", from:github
@@ -20,29 +20,25 @@ zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 zplug load
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
-export EDITOR="nvim"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+if [ -f /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
-# if macos
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias ghosttyconfig="$EDITOR ~/Library/Application\ Support/com.mitchellh.ghostty/config"
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
+source ~/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# if [[ -z "$TMUX" ]]; then
-#     if tmux has-session 2>/dev/null; then
-#         tmux attach
-#     else
-#         tmux
-#     fi
-# fi
-export NIX_SHELL="zsh"
+
 alias vim='nvim'
+alias k='kubectl'
+
 
 eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"
+eval "$(gh copilot alias -- zsh)"
+

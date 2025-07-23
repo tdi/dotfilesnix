@@ -41,6 +41,7 @@
     yaml-language-server
     pyright
     nil
+    zsh-autosuggestions
 
     # puml
     graphviz

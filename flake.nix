@@ -10,7 +10,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager,  ... }:
     let
       managedHosts = {
         mac = { # personal laptop
@@ -31,6 +31,7 @@
             ./home/common.nix
             ./home/arch_${managedHosts.${hostName}.system}.nix
             ./home/host_${hostName}.nix
+            
           ];
         };
       }) (builtins.attrNames managedHosts));
