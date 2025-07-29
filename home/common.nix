@@ -20,7 +20,7 @@
     go
     uv
     jq
-    
+
     # cloud
     awscli2
 
@@ -46,10 +46,19 @@
     graphviz
 
   ];
-  home.file.".zshrc".source = ../zshrc;
+  # home.file.".zshrc".source = ../zshrc;
   home.file.".tmux.conf".source = ../tmux.conf;
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      ll = "ls -la";
+      gs = "git status";
+    };
+    initContent = builtins.readFile ../zshrc;
+
+  };
   home.stateVersion = "25.05";
   home.username = "darek";
 }
-
