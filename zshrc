@@ -3,7 +3,7 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 
 ZSH_THEME=""
-plugins=(git ssh-agent)
+plugins=(git ssh-agent keychain)
 # User configuration
 export ZSH=$HOME/.oh-my-zsh
 
