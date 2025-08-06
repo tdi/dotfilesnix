@@ -18,7 +18,7 @@
           # personal laptop
           system = "aarch64-darwin";
         };
-        mac-1 = {
+        mini = {
           # work laptop
           system = "aarch64-darwin";
         };
