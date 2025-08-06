@@ -10,31 +10,37 @@
 
   };
 
-  outputs = { nixpkgs, home-manager,  ... }:
+  outputs =
+    { nixpkgs, home-manager, ... }:
     let
       managedHosts = {
-        mac = { # personal laptop
+        air = {
+          # personal laptop
           system = "aarch64-darwin";
         };
-        mac-1 = { # work laptop
+        mac-1 = {
+          # work laptop
           system = "aarch64-darwin";
         };
       };
-    in {
-      homeConfigurations = builtins.listToAttrs (map (hostName: {
-        name = "darek@${hostName}";
+    in
+    {
+      homeConfigurations = builtins.listToAttrs (
+        map (hostName: {
+          name = "darek@${hostName}";
 
-        value = home-manager.lib.homeManagerConfiguration {
-          pkgs = import nixpkgs { system = managedHosts.${hostName}.system; };
+          value = home-manager.lib.homeManagerConfiguration {
+            pkgs = import nixpkgs { system = managedHosts.${hostName}.system; };
 
-          modules = [
-            ./home/common.nix
-            ./home/arch_${managedHosts.${hostName}.system}.nix
-            ./home/host_${hostName}.nix
-            
-          ];
-        };
-      }) (builtins.attrNames managedHosts));
+            modules = [
+              ./home/common.nix
+              ./home/arch_${managedHosts.${hostName}.system}.nix
+              ./home/host_${hostName}.nix
+
+            ];
+          };
+        }) (builtins.attrNames managedHosts)
+      );
 
     };
 }
